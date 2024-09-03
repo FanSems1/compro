@@ -57,7 +57,7 @@ const RecruitmentPage = () => {
       <Header />
       <Container maxWidth="ld" sx={{ mt: 15 }}>
         <Box sx={containerStyles(theme)}>
-          <Typography variant="h4" sx={headerTypographyStyles(theme)}>
+          <Typography variant="h3" sx={{ ...headerTypographyStyles(theme), color: 'black' }}>
             Tahapan Rekrutmen Kami
           </Typography>
           <Typography variant="body1" sx={bodyTypographyStyles(theme)}>
@@ -83,7 +83,7 @@ const RecruitmentPage = () => {
 
           {/* Call to Action */}
           <Divider sx={{ my: 6, borderColor: theme.palette.divider }} />
-          <Typography variant="h5" sx={{ mb: 4, textAlign: 'center', color: theme.palette.primary.main, fontWeight: 'bold' }}>
+          <Typography variant="h4" sx={{ mb: 4, textAlign: 'center', color: 'black', fontWeight: 'bold' }}>
             Temukan Kesempatan Karir Kami
           </Typography>
           <Grid container spacing={2} justifyContent="center">

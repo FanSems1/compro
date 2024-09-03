@@ -13,26 +13,26 @@ const theme = createTheme({
     palette: {
         text: {
             primary: "#121315", // Default Text Color
-            secondary: "#FF4F3E" // Secondary Text Color
+            secondary: "#555657" // Secondary Text Color
         },
         background: {
             default: "#FFFFFF" // Default Background Color
         },
         primary: {
-            main: "#FF4F3E", // Document Main Primary Color
-            light: "#CECECE", // Document Light Color (Button Background)
-            box_shadow_black: " #0000001c", // Box Shadow Black (Header Sticky)
+            main: "#0d9dfc", // Document Main Primary Color
+            light: "#426cf5", // Document Light Color (Button Background)
+            box_shadow_black: "#969799", // Box Shadow Black (Header Sticky)
             success: "#4CAF50", // SuccessMessage Color
-            box_shadow_client: "#0000001c", /// Box Shadow Clinet Slider
-            box_show_blog: "#FF4F3E21", //Box Shadow Blog Section
+            box_shadow_client: "#33a4f5", /// Box Shadow Clinet Slider
+            box_show_blog: "#33a4f5", //Box Shadow Blog Section
             box_shadow_blog_2: "#0000001a", // Box Shadow Blog Category
             divider: "#AEAEAE", // Divider Color (All Section Divider)
             social_bg: "#E7E7E7", // Social Background Color
             social_color: "#415674", // Social Icon Color
-            inputBorder: "#0000001f", //For NewsLetter Input Border Color
-            HeroGradient: "linear-gradient(90deg, rgba(223,234,233,1) 0%, rgba(249,219,163,1) 100%)", // Gradient (Hero Section)
-            WorkGradient: "linear-gradient(90deg, rgba(223,234,233,1) 0%, rgba(249,219,163,1) 100%)", // Gradient (Portfolio Section)
-            ContactGradient: "linear-gradient(90deg, rgba(223,234,233,1) 0%, rgba(249,219,163,1) 100%)", // Gradient (Contact Section)
+            inputBorder: "#4e524f", //For NewsLetter Input Border Color
+            HeroGradient: "linear-gradient(90deg, rgba(223,234,233,1) 0%, rgba(45,79,229,1) 100%)", // Gradient (Hero Section)
+            WorkGradient: "linear-gradient(90deg, rgba(223,234,233,1) 0%, rgba(45,79,229,1) 100%)", // Gradient (Portfolio Section)
+            ContactGradient: "linear-gradient(90deg, rgba(223,234,233,1) 0%, rgba(45,79,229,1) 100%)", // Gradient (Contact Section)
             ContactImage: `url('/images/contact-image.jpg') no-repeat center center`,
         }
     },

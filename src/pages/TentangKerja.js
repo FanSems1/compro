@@ -10,6 +10,7 @@ import FooterOne from "Components/Footer/FooterOne";
 import FooterTwo from "Components/Footer/FooterTwo";
 import FooterThree from "Components/Footer/FooterThree";
 import BottomFooter from "Components/Footer/BottomFooter";
+import Contact from 'Section/Contact';
 
 const TentangKerja = () => {
   const theme = useTheme();
@@ -82,7 +83,7 @@ const TentangKerja = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Lowongan di Glints
+                Lowongan kerja di Glints
               </Button>
             </Grid>
             <Grid item>
@@ -94,7 +95,7 @@ const TentangKerja = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Lowongan di LinkedIn
+                Lowongan kerja di LinkedIn
               </Button>
             </Grid>
             <Grid item>
@@ -105,12 +106,13 @@ const TentangKerja = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Lowongan di JobStreet
+                Lowongan kerja di JobStreet
               </Button>
             </Grid>
           </Grid>
         </Box>
       </Container>
+      <Contact />
       <Footer />
     </ThemeProvider>
   );

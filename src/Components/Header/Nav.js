@@ -24,14 +24,14 @@ const getMenuItems = (nav) => {
       ];
     case 'Solusi':
       return [
-        { key: '6', label: 'Solusi perusahaan' },
-        { key: '7', label: 'Solusi individu' },
+        { key: '6', label: 'Solusi perusahaan', link: '/solusi-perusahaan' },
+        { key: '7', label: 'Solusi individu', link: '/solusi-individu' },
       ];
     case 'Resource':
       return [
-        { key: '8', label: 'Blog' },
-        { key: '9', label: 'Studi kasus' },
-        { key: '10', label: 'Pusat bantuan' },
+        { key: '8', label: 'Blog', link: '/blog' },
+        { key: '9', label: 'Studi kasus', link: '/studi-kasus' },
+        { key: '10', label: 'Pusat bantuan', link: '/pusat-bantuan' },
       ];
     case 'Karir':
       return [
@@ -39,7 +39,7 @@ const getMenuItems = (nav) => {
         { key: '12', label: 'Tentang kerja', link: '/TentangKerja' },
         { key: '13', label: 'Budaya Perusahaan', link: '/budaya' },
         { key: '14', label: 'Testimoni', link: '/testimoni' },
-        { key: '15', label: 'Benefit', link: '/Benefit' },
+        { key: '15', label: 'Benefit', link: '/benefit' },
         { key: '16', label: 'Departemen di Eureka', link: '/departemen' },
         { key: '17', label: 'Tahapan Rekrutment', link: '/tahapan' },
         { key: '18', label: 'FAQ', link: '/FAQ' },

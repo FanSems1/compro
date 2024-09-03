@@ -24,7 +24,7 @@ const index = () => {
       <Skill />
       <Blog />
       <Client />
-      <Contact />
+      {/* <Contact /> */}
       <Footer />
     </>
   );

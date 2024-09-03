@@ -63,7 +63,7 @@ const Form = () => {
                 </Grid>
                 <Grid item md={3} lsm={6} xxs={12}>
                     <InputBase
-                        placeholder="Email Address"
+                        placeholder="Your Email Address"
                         endAdornment={
                             <InputAdornment position="end">
                                 <Box sx={styles.Icon}>

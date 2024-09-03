@@ -19,6 +19,7 @@ const HeroContent = () => {
             </Typography>
             <Typography variant="body1" component="p" sx={styles.Description}>
                 Eureka mantap, Eureka Bisa, Eureka Keren!!!
+                <br/> Bisa Bisa Bisa!!!
             </Typography>
             <Link
                 to="portfolio"

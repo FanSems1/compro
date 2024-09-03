@@ -8,46 +8,15 @@ import FooterOne from "Components/Footer/FooterOne";
 import FooterTwo from "Components/Footer/FooterTwo";
 import FooterThree from "Components/Footer/FooterThree";
 import BottomFooter from "Components/Footer/BottomFooter";
+import testimonials from "./Data/testimoni";
 
 // Importing images
-import photo1 from "Assets/footer/footer-1.png";
-import photo2 from "Assets/footer/footer-2.png";
-import photo3 from "Assets/footer/footer-3.png";
-import photo4 from "Assets/footer/footer-4.png";
 import backgroundImage from "../Assets/contact.png"; // Ganti dengan path ke gambar latar belakang Anda
 
 // Slider CSS
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Contact from 'Section/Contact';
-
-// Testimonial Data
-const testimonials = [
-  {
-    name: "John Doe",
-    position: "CEO at Company",
-    testimonial: "PT Eureka’s commitment to innovation and professional growth has been outstanding. Our collaboration has greatly benefited both our companies.",
-    photo: photo1
-  },
-  {
-    name: "Jane Smith",
-    position: "Marketing Director",
-    testimonial: "Working with PT Eureka has been an incredible experience. Their dedication to excellence and collaboration truly sets them apart.",
-    photo: photo2
-  },
-  {
-    name: "Michael Johnson",
-    position: "Product Manager",
-    testimonial: "PT Eureka’s environment fosters creativity and teamwork. Their support has been crucial in the success of our joint projects.",
-    photo: photo3
-  },
-  {
-    name: "Emily Davis",
-    position: "Software Engineer",
-    testimonial: "The opportunity to work with PT Eureka has enhanced my skills and career. Their focus on development and innovation is impressive.",
-    photo: photo4
-  }
-];
 
 const TestimonialsPage = () => {
   const theme = useTheme();

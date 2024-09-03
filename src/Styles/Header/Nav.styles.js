@@ -12,8 +12,8 @@ const styles = {
     },
     Buttons: {
         fontSize: "15px",
-        borderRadius: "3px",
-        p: "5px 5px",
+        borderRadius: "2px",
+        p: "5px 10px",
         fontWeight: 700,
         transition: "0.2s ease"
     }
