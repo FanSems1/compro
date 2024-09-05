@@ -59,10 +59,9 @@ const SingleBlog = () => {
                 </Typography>
                 <Stack direction="row" sx={{ alignItems: 'center' }}>
                   <Box sx={styles.TimeIcon}>
-                    <ClendarIcon />
                   </Box>
                   <Typography variant="body1" component="p" sx={styles.TimeText}>
-                    {blog.time}
+                    {blog.isi}
                   </Typography>
                 </Stack>
                 <ButtonBase sx={styles.Button} onClick={handleClickOpen(i)}>

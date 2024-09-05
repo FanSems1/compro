@@ -8,15 +8,64 @@ import FooterOne from "Components/Footer/FooterOne";
 import FooterTwo from "Components/Footer/FooterTwo";
 import FooterThree from "Components/Footer/FooterThree";
 import BottomFooter from "Components/Footer/BottomFooter";
-import testimonials from "./Data/testimoni";
+import Contact from 'Section/Contact';
 
 // Importing images
-import backgroundImage from "../Assets/contact.png"; // Ganti dengan path ke gambar latar belakang Anda
+import backgroundImage from "../Assets/contact.png";
+import photo1 from "../Assets/footer/footer.png";
+import photo2 from "../Assets/footer/footer1.png";
+import photo3 from "../Assets/footer/footer2.png";
+import photo4 from "../Assets/footer/footer3.png";
 
 // Slider CSS
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Contact from 'Section/Contact';
+
+// Testimonial Data
+const testimonials = [
+  {
+    name: "John Doe",
+    position: "CEO at Company",
+    testimonial: "PT Eureka’s commitment to innovation and professional growth has been outstanding. Our collaboration has greatly benefited both our companies.",
+    photo: photo1
+  },
+  {
+    name: "M. Hasyim Ridwan",
+    position: "Manager at Company",
+    testimonial: "PT Eureka’s commitment to innovation and professional growth has been outstanding. Our collaboration has greatly benefited both our companies.",
+    photo: photo1
+  },
+  {
+    name: "Ridwan Kecil",
+    position: "Full Stack Developer at Company",
+    testimonial: "PT Eureka’s commitment to innovation and professional growth has been outstanding. Our collaboration has greatly benefited both our companies.",
+    photo: photo2
+  },
+  {
+    name: "Viko",
+    position: "Staff IT at Company",
+    testimonial: "PT Eureka’s commitment to innovation and professional growth has been outstanding. Our collaboration has greatly benefited both our companies.",
+    photo: photo1
+  },
+  {
+    name: "Jane Smith",
+    position: "Marketing Director",
+    testimonial: "Working with PT Eureka has been an incredible experience. Their dedication to excellence and collaboration truly sets them apart.",
+    photo: photo2
+  },
+  {
+    name: "Michael Johnson",
+    position: "Product Manager",
+    testimonial: "PT Eureka’s environment fosters creativity and teamwork. Their support has been crucial in the success of our joint projects.",
+    photo: photo3
+  },
+  {
+    name: "Emily Davis",
+    position: "Software Engineer",
+    testimonial: "The opportunity to work with PT Eureka has enhanced my skills and career. Their focus on development and innovation is impressive.",
+    photo: photo4
+  }
+];
 
 const TestimonialsPage = () => {
   const theme = useTheme();
@@ -49,35 +98,35 @@ const TestimonialsPage = () => {
             textAlign: 'center',
             position: 'relative',
             overflow: 'hidden',
-            backgroundImage: `url(${backgroundImage})`, // Menambahkan gambar latar belakang
-            backgroundSize: 'cover', // Menutupi seluruh area
-            backgroundPosition: 'center', // Memposisikan gambar di tengah
-            backgroundRepeat: 'no-repeat', // Menghindari pengulangan gambar
+            backgroundImage: `url(${backgroundImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
           }}
         >
           {/* Decorative Angular Brackets */}
-          <Typography 
+          <Typography
             sx={{
-              position: 'absolute', 
-              top: -30, 
-              left: -30, 
-              fontSize: '100px', 
-              color: theme.palette.primary.main, 
-              fontWeight: 700, 
+              position: 'absolute',
+              top: -30,
+              left: -30,
+              fontSize: '100px',
+              color: theme.palette.primary.main,
+              fontWeight: 700,
               opacity: 0.1,
               transform: 'rotate(-15deg)'
             }}
           >
             &lt;
           </Typography>
-          <Typography 
+          <Typography
             sx={{
-              position: 'absolute', 
-              bottom: -30, 
-              right: -30, 
-              fontSize: '100px', 
-              color: theme.palette.primary.main, 
-              fontWeight: 700, 
+              position: 'absolute',
+              bottom: -30,
+              right: -30,
+              fontSize: '100px',
+              color: theme.palette.primary.main,
+              fontWeight: 700,
               opacity: 0.1,
               transform: 'rotate(15deg)'
             }}
@@ -102,24 +151,19 @@ const TestimonialsPage = () => {
                   borderRadius: '20px',
                   boxShadow: '0 8px 16px rgba(0, 0, 0, 0.1)',
                   backgroundColor: theme.palette.background.paper,
-                  transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
-                  '&:hover': {
-                    transform: 'scale(1.05)',
-                    boxShadow: '0 12px 24px rgba(0, 0, 0, 0.15)',
-                  },
-                  animation: 'fadeIn 1s ease-in-out'
+                  // Removed hover effect and animation
                 }}
               >
-                <Avatar 
-                  src={testimonial.photo} 
-                  sx={{ 
-                    width: 100, 
-                    height: 100, 
-                    mb: 2, 
-                    border: `4px solid ${theme.palette.primary.main}`, 
-                    borderRadius: '50%', 
-                    mx: 'auto'  // Centering the Avatar horizontally
-                  }} 
+                <Avatar
+                  src={testimonial.photo}
+                  sx={{
+                    width: 100,
+                    height: 100,
+                    mb: 2,
+                    border: `4px solid ${theme.palette.primary.main}`,
+                    borderRadius: '50%',
+                    mx: 'auto'
+                  }}
                 />
                 <CardContent sx={{ textAlign: 'center' }}>
                   <Typography variant="h6" sx={{ mb: 1, color: theme.palette.text.primary, fontWeight: 700 }}>

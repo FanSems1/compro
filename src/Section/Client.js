@@ -12,12 +12,12 @@ import styles from "Styles/Client/Client.styles";
 
 const Client = () => {
     return (
-        <Box component="section" sx={styles.Container} id="client">
-            <SectionHeading
-                value1="Wanna Join US?"
-                value2="Let's GO!!!"
-                border={true}
-            />
+        <Box component="section" sx={{ ...styles.Container, color:"white"}} id="client">
+            {/* <SectionHeading
+                value1="Tunggu apalagi? Ayo wujudkan impianmu bersama EUREKA!"
+                value2="Dengan eureka, kita ciptakan business goal dengan solusi professional dengan anda. #Salam Victory! "
+                // border={true}
+            /> */}
             <Slider />
         </Box>
     );

@@ -19,15 +19,15 @@ const TentangKerja = () => {
     <ThemeProvider theme={theme}>
       <Heads />
       <Header />
-      <Container maxWidth="ld" sx={{ mt: 5, mb:-2 }}>
+      <Container maxWidth="ld" sx={{ mt: 5, mb:0 }}>
         <Box
           sx={{
             p: 10,
             borderRadius: 5,
             background: `linear-gradient(135deg, ${theme.palette.background.default} 0%, ${theme.palette.primary.light} 100%)`,
             boxShadow: `0 4px 8px ${theme.palette.primary.box_shadow_black}`,
-            mb: 0,
-            mt: 12,
+            mb: 5,
+            mt: 2,
           }}
         >
           <Typography variant="h4" sx={{ mb: 4, textAlign: 'center', color: theme.palette.primary.main }}>

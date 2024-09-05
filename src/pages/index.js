@@ -9,7 +9,7 @@ import Portfolio from "Section/Portfolio";
 import Skill from "Section/Skill";
 import Client from "Section/Client";
 import Blog from "Section/Blog";
-import Contact from "Section/Contact";
+import Kontak from "Section/Kontak";
 import Footer from "Section/Footer";
 
 
@@ -19,12 +19,12 @@ const index = () => {
       <Heads />
       <Header />
       <Hero />
-      <About />
       <Portfolio />
+      <About />
       <Skill />
-      <Blog />
       <Client />
-      {/* <Contact /> */}
+      <Blog />
+      <Kontak />
       <Footer />
     </>
   );

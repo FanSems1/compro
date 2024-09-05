@@ -4,6 +4,7 @@ import { Container, Grid } from "@mui/material";
 import FooterOne from "Components/Footer/FooterOne";
 import FooterTwo from "Components/Footer/FooterTwo";
 import FooterThree from "Components/Footer/FooterThree";
+import FooterFour from "Components/Footer/FooterFour";
 import BottomFooter from "Components/Footer/BottomFooter";
 
 const Footer = () => {
@@ -17,9 +18,10 @@ const Footer = () => {
                     <FooterTwo />
                 </Grid>
                 <Grid item md={3} sm={6} xxs={12}>
-                    <FooterThree />
+                    <FooterFour/>
                 </Grid>
                 <Grid item md={3} sm={6} xxs={12}>
+                <FooterThree />
                 </Grid>
             </Grid>
             <BottomFooter />

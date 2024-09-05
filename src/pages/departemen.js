@@ -113,7 +113,7 @@ const DepartmentPage = () => {
   const classes = departmentStyles(theme);
 
   return (
-    <Container maxWidth="ld" sx={{ ...classes.container, mt: 6, mb: 4 }}>
+    <Container maxWidth="ld" sx={{ ...classes.container, mt: -10, mb: -2 }}>
       <Heads />
       <Header />
       <Box sx={classes.box}>

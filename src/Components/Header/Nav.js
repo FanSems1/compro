@@ -35,7 +35,7 @@ const getMenuItems = (nav) => {
       ];
     case 'Karir':
       return [
-        { key: '11', label: 'Lowongan kerja', link: 'https://glints.com/id/companies/pt-eureka-bookhouse/a98a603b-875b-4ce4-a4fa-2615d3402597' },
+        { key: '11', label: 'Lowongan kerja', link: '/lowongan-kerja' },
         { key: '12', label: 'Tentang kerja', link: '/TentangKerja' },
         { key: '13', label: 'Budaya Perusahaan', link: '/budaya' },
         { key: '14', label: 'Testimoni', link: '/testimoni' },
@@ -106,7 +106,7 @@ const Nav = () => {
                         </Dropdown>
                     );
                 }
-            })}
+            })} 
         </Box>
     );
 };

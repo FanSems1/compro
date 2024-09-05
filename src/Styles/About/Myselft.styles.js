@@ -1,16 +1,27 @@
 const styles = {
     Container: {
         mt: {
-            msm: "12em",
-            sm: "7em",
-            xxs: "6em"
+            msm: "0.5em",  // Margin top
+            sm: "6em",
+            xxs: "5em"
         },
-        pb: "5rem",
-        position: "relative"
+        mb: {
+            lg: "2em",     // Margin bottom untuk ukuran layar besar
+            md: "1.5em",   // Margin bottom untuk ukuran layar sedang
+            sm: "1em",     // Margin bottom untuk ukuran layar kecil
+            xs: "0.5em"    // Margin bottom untuk ukuran layar ekstra kecil
+        },
+        pb: "51rem",      // Padding bottom
+        position: "relative",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        gap: "1.5rem",    // Jarak antara teks dan gambar
     },
+
     Title: {
         fontWeight: 700,
-        mb: "25px",
+        mb: "20px",
         fontSize: {
             lg: "2.125rem",
             md: "2rem",
@@ -19,75 +30,51 @@ const styles = {
             sm: "1.9rem",
             xs: "1.8rem",
             xxs: "1.5rem"
-        }
+        },
+        pl: "1rem"  // Menambahkan padding-left untuk menggeser teks ke samping
     },
     Description: {
         mb: "15px",
         pl: "15px",
+        maxWidth: "80%",
         position: "relative",
-        "&:after": {
-            content: '""',
-            width: "3px",
-            top: "7px",
-            bottom: "5px",
-            backgroundColor: "primary.main",
-            position: "absolute",
-            left: "0"
-        }
-    },
-    Features: {
-        mb: "15px",
-        alignItems: "center",
-        svg: {
-            backgroundColor: "primary.main",
-            width: "20px",
-            height: "20px",
-            color: "background.default",
-            borderRadius: "50%",
-            p: "3px",
-            mr: "8px"
-        },
-        "& p": {
-            fontSize: "15px",
-            fontWeight: 500
-        }
+        // "&:after": {
+        //     content: '""',
+        //     width: "3px",
+        //     top: "7px",
+        //     bottom: "5px",
+        //     backgroundColor: "primary.main",
+        //     position: "absolute",
+        //     left: "0"
+        // }
     },
     Button: {
-        backgroundColor: "primary.light",
+        // backgroundColor: "primary.light",
+        color: "blue",
         p: "14px 25px",
+        ml: "20px",
         mt: "5px",
         borderRadius: "5px",
         fontSize: "14px",
         fontWeight: 500,
         transition: "0.3s ease",
         svg: {
-            color: "background.default",
+            // color: "background.default",
             fontSize: "17px",
             ml: "10px",
             mb: "-1px"
         },
         "&:hover": {
-            backgroundColor: "primary.main",
+            backgroundColor: "#213689",
             color: "background.default"
         }
     },
     Image: {
-        position: "absolute",
-        right: {
-            lg: "0%",
-            xxs: "0%",
-
-        },
-        bottom: "0",
-        width: {
-            xxl: "52%",
-            md: "65%",
-            xxs: "0%"
-        },
-        display: {
-            md: "unset",
-            xxs: "none"
-        }
+        maxWidth: "25%",
+        marginLeft: "auto",
+        marginTop: "0px",
+        borderRadius: "8px",
+        marginRight: "100px", // Shift the image slightly to the left
     }
 };
 

@@ -69,7 +69,7 @@ const FooterThree = () => {
                     type="submit"
                     sx={{
                         ...styles.SubmitButton,
-                        backgroundColor: `${success ? "primary.success" : "primary.main"}`
+                        backgroundColor: `${success ? "primary.success" : "#213689"}`
                     }}
                 >
                     {!loading && !message &&
