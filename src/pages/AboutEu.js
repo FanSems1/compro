@@ -12,7 +12,7 @@ import BapakRaja from '../Assets/animasi/karir/bapakRaja.png';
 // import Star from '../Assets/animasi/karir/Star 6';
 // import Buletan from '../Assets/animasi/karir/buletan';
 
-// Component for the AboutEurekaGroup
+// Component for the 
 const AboutEurekaGroup = () => {
   const smallImages = [
     BookIcon,
@@ -49,13 +49,13 @@ const AboutEurekaGroup = () => {
             position: 'relative'
           }}>
             {/* Large Image */}
-            <Image 
-                src={BapakRaja} 
-                alt="Large Image" 
-                width={630} 
-                height={367} 
-                style={{ width: '80%', height: 'auto' }} 
-            />        
+            <Image
+              src={BapakRaja}
+              alt="Large Image"
+              width={630}
+              height={367}
+              style={{ width: '80%', height: 'auto' }}
+            />
           </div>
         </Grid>
 
@@ -65,23 +65,23 @@ const AboutEurekaGroup = () => {
             {smallImages.map((img, index) => (
               <Grid item xs={6} sm={4} md={3} lg={2} key={index}>
                 <div style={{
-                  width: '100%', 
-                  padding: '8px', 
+                  width: '100%',
+                  padding: '8px',
                   display: 'flex',
                   justifyContent: 'center',
                   alignItems: 'center',
                 }}>
                   {/* Small Images */}
-                  <Image 
-                      src={img} 
-                      alt={`Small Image ${index + 1}`} 
-                      width={160} 
-                      height={83} 
-                      style={{ 
-                          maxWidth: '100%', 
-                          height: 'auto', 
-                          objectFit: 'cover' 
-                      }} 
+                  <Image
+                    src={img}
+                    alt={`Small Image ${index + 1}`}
+                    width={160}
+                    height={83}
+                    style={{
+                      maxWidth: '100%',
+                      height: 'auto',
+                      objectFit: 'cover'
+                    }}
                   />
                 </div>
               </Grid>

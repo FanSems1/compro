@@ -18,7 +18,7 @@ module.exports = withBundleAnalyzer({
     domains: ['images.unsplash.com', apiDomain, '3wzg6m6x-5000.asse.devtunnels.ms', '192.168.1.170'],
   },
   webpack(config) {
-    // Optional: Enable code splitting
+    // Optional: Enable code 
     config.optimization.splitChunks = {
       chunks: 'all',
     };
