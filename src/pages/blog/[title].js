@@ -61,42 +61,60 @@ const parseDescription = (html) => {
   return styledText;
 };
 
-// Get static paths for dynamic routing
 export async function getStaticPaths() {
-  const res = await fetch('https://3wzg6m6x-5000.asse.devtunnels.ms/api/blog');
-  const blogs = await res.json();
+  try {
+    const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://3wzg6m6x-5000.asse.devtunnels.ms';
+    const res = await fetch(`${baseUrl}/api/blog`);
+    if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+    const blogs = await res.json();
 
-  const paths = blogs.map((post) => ({
-    params: { title: post.title.replace(/\s+/g, '-') },
-  }));
+    const paths = blogs.map((post) => ({
+      params: { title: post.title.replace(/\s+/g, '-') },
+    }));
 
-  return {
-    paths,
-    fallback: false,
-  };
+    return {
+      paths,
+      fallback: false,
+    };
+  } catch (error) {
+    console.error('Failed to fetch blogs in getStaticPaths:', error);
+    return {
+      paths: [],
+      fallback: false,
+    };
+  }
 }
 
 // Get static props for the specific blog post
 export async function getStaticProps({ params }) {
-  const originalTitle = params.title.replace(/-/g, ' ');
-  const res = await fetch('https://3wzg6m6x-5000.asse.devtunnels.ms/api/blog');
-  const blogs = await res.json();
+  try {
+    const originalTitle = params.title.replace(/-/g, ' ');
+    const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://3wzg6m6x-5000.asse.devtunnels.ms';
+    const res = await fetch(`${baseUrl}/api/blog`);
+    if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+    const blogs = await res.json();
 
-  const blog = blogs.find((post) => post.title === originalTitle);
-  const currentBlogs = blogs.filter((post) => post.title !== originalTitle);
+    const blog = blogs.find((post) => post.title === originalTitle);
+    const currentBlogs = blogs.filter((post) => post.title !== originalTitle);
 
-  if (!blog) {
+    if (!blog) {
+      return {
+        notFound: true,
+      };
+    }
+
+    return {
+      props: {
+        blog,
+        currentBlogs, // Pass the current blogs to the props
+      },
+    };
+  } catch (error) {
+    console.error('Failed to fetch blog in getStaticProps:', error);
     return {
       notFound: true,
     };
   }
-
-  return {
-    props: {
-      blog,
-      currentBlogs, // Pass the current blogs to the props
-    },
-  };
 }
 
 // Main BlogPage component

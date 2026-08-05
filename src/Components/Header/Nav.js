@@ -65,7 +65,8 @@ const Nav = () => {
     // Fetching data from the API
     const fetchDetailItems = async () => {
       try {
-        const response = await axios.get('https://3wzg6m6x-5000.asse.devtunnels.ms/api/bu_detail');
+        const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://3wzg6m6x-5000.asse.devtunnels.ms';
+        const response = await axios.get(`${baseUrl}/api/bu_detail`);
         const fetchedItems = response.data.map(item => ({
           key: item.id_bu_master.toString(),
           logo: getLogoByTitle(item.bu_master.name),

@@ -47,10 +47,12 @@ const CaseStudyPage = () => {
   useEffect(() => {
     const fetchJobData = async () => {
       try {
-        const response = await axios.get('https://3wzg6m6x-5000.asse.devtunnels.ms/api/study');
+        const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://3wzg6m6x-5000.asse.devtunnels.ms';
+        const response = await axios.get(`${baseUrl}/api/study`);
         setCaseStudyData(response.data); // Set the fetched data
       } catch (error) {
         console.error('Error fetching case study data:', error);
+        setCaseStudyData([]);
       }
     };
 

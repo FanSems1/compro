@@ -57,10 +57,19 @@ const BlogPage = () => {
 
   useEffect(() => {
     const fetchBlogs = async () => {
-      const response = await fetch('https://3wzg6m6x-5000.asse.devtunnels.ms/api/blog');
-      const data = await response.json();
-      const filteredData = data.filter(blog => blog.id_bu_master );
-      setBlogs(filteredData);
+      try {
+        const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://3wzg6m6x-5000.asse.devtunnels.ms';
+        const response = await fetch(`${baseUrl}/api/blog`);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        const filteredData = data.filter(blog => blog.id_bu_master );
+        setBlogs(filteredData);
+      } catch (error) {
+        console.error('Failed to fetch blogs:', error);
+        setBlogs([]);
+      }
     };
     fetchBlogs();
   }, []);

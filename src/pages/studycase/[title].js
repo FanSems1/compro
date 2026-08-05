@@ -391,7 +391,8 @@ const NextButton = ({ enabled, onClick }) => (
 export async function getStaticPaths() {
   try {
     // Fetch data from API
-    const res = await axios.get('https://3wzg6m6x-5000.asse.devtunnels.ms/api/study');
+    const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://3wzg6m6x-5000.asse.devtunnels.ms';
+    const res = await axios.get(`${baseUrl}/api/study`);
     const caseStudyData = res.data;
 
     // Check the data structure
@@ -423,29 +424,37 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const { title } = params;
 
-  // Fetch data from API
-  const res = await axios.get('https://3wzg6m6x-5000.asse.devtunnels.ms/api/study');
-  const caseStudyData = res.data;
+  try {
+    // Fetch data from API
+    const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://3wzg6m6x-5000.asse.devtunnels.ms';
+    const res = await axios.get(`${baseUrl}/api/study`);
+    const caseStudyData = res.data;
 
-  // Find the specific case study by title
-  const originalTitle = title.replace(/-/g, ' ').toLowerCase();
+    // Find the specific case study by title
+    const originalTitle = title.replace(/-/g, ' ').toLowerCase();
 
-  const caseStudy = caseStudyData.find(
-    (item) => item.title.toLowerCase() === originalTitle
-  );
+    const caseStudy = caseStudyData.find(
+      (item) => item.title.toLowerCase() === originalTitle
+    );
 
-  if (!caseStudy) {
+    if (!caseStudy) {
+      return {
+        notFound: true,
+      };
+    }
+
+    return {
+      props: {
+        caseStudy,
+        caseStudyData,
+      },
+    };
+  } catch (error) {
+    console.error('Failed to fetch case study in getStaticProps:', error);
     return {
       notFound: true,
     };
   }
-
-  return {
-    props: {
-      caseStudy,
-      caseStudyData,
-    },
-  };
 }
 
 export default CaseStudyPage;

@@ -57,10 +57,12 @@ const JobVacancies = () => {
 
     const fetchJobData = async () => {
       try {
-        const response = await axios.get('https://3wzg6m6x-5000.asse.devtunnels.ms/api/career');
+        const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://3wzg6m6x-5000.asse.devtunnels.ms';
+        const response = await axios.get(`${baseUrl}/api/career`);
         setJobData(response.data);
       } catch (error) {
         console.error('Failed to fetch job data', error);
+        setJobData([]);
       }
     };
     useEffect(() => {

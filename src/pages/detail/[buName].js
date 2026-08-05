@@ -73,7 +73,8 @@ const Detail = () => {
       try {
         setLoading(true);
         const token = localStorage.getItem('token');
-        const response = await axios.get('https://3wzg6m6x-5000.asse.devtunnels.ms/api/bu_detail', {
+        const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://3wzg6m6x-5000.asse.devtunnels.ms';
+        const response = await axios.get(`${baseUrl}/api/bu_detail`, {
           headers: { Authorization: `${token}` },
         });
   

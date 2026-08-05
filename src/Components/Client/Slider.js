@@ -39,11 +39,14 @@ const Sliders = () => {
     useEffect(() => {
         const fetchCareers = async () => {
             try {
-                const response = await fetch("https://3wzg6m6x-5000.asse.devtunnels.ms/api/career");
+                const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://3wzg6m6x-5000.asse.devtunnels.ms';
+                const response = await fetch(`${baseUrl}/api/career`);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                 const data = await response.json();
                 setCareers(data); // Assuming the API returns an array of job objects
             } catch (error) {
                 console.error("Error fetching careers:", error);
+                setCareers([]);
             }
         };
 
